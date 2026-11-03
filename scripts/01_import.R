@@ -97,24 +97,20 @@ acs_comparison
 
 # SAVE THE DATA ---------------------------------------------------------------------------------------
 
-dir.create(
-  "data/processed",
-  recursive = TRUE,
-  showWarnings = FALSE
-)
-
 write.csv(
   acs_comparison,
-  "data/processed/ACS_Geographic_Comparison_2024.csv",
+  "data/acs_geographic_comparison_2024.csv",
   row.names = FALSE
 )
 
-
+# LOAD NJDOE DATA ---------------------------------------------------------------------------------------
 # NJDOE Source, ELA Performance ---------------------------------------------------------------------------------------
 
 njdoe_ela <- read_csv(
   "data/njdoe_2024-2025_ela_performance_test.csv"
 )
+
+# Three checks
 
 dim(njdoe_ela)
 names(njdoe_ela)
@@ -126,14 +122,19 @@ njdoe_math <- read_csv(
   "data/njdoe_2024-2025_math_performance_test.csv"
 )
 
+# Three checks
+
 dim(njdoe_math)
 names(njdoe_math)
 summary(njdoe_math)
 
 # NJDOE Source, Overall Student Growth ---------------------------------------------------------------------------------------
+
 njdoe_student_growth <- read_csv(
   "data/njdoe_2024-2025_student_growth_trends.csv"
 )
+
+# Three checks
 
 dim(njdoe_student_growth)
 names(njdoe_student_growth)
