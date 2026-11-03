@@ -113,6 +113,28 @@ write.csv(
 # NJDOE Source, ELA Performance ---------------------------------------------------------------------------------------
 
 njdoe_ela <- read_csv(
-  "data/njdoe_2024-2025_ela_performance_test.csv")
-  ))
-  
+  "data/njdoe_2024-2025_ela_performance_test.csv"
+)
+
+dim(njdoe_ela)
+names(njdoe_ela)
+summary(njdoe_ela)
+
+# NJDOE Source, Math Performance ---------------------------------------------------------------------------------------
+
+njdoe_math <- read_csv(
+  "data/njdoe_2024-2025_math_performance_test.csv"
+)
+
+dim(njdoe_math)
+names(njdoe_math)
+summary(njdoe_math)
+
+# NJDOE Source, Overall Student Growth ---------------------------------------------------------------------------------------
+njdoe_student_growth <- read_csv(
+  "data/njdoe_2024-2025_student_growth_trends.csv"
+)
+
+dim(njdoe_student_growth)
+names(njdoe_student_growth)
+summary(njdoe_student_growth)
