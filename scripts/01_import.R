@@ -116,6 +116,26 @@ dim(njdoe_ela)
 names(njdoe_ela)
 summary(njdoe_ela)
 
+# Keep Only ALL STUDENTS
+
+ela_clean <- njdoe_ela |> 
+  filter(student_group == "All Students") |>
+  select(
+    school_code,
+    school_name,
+    school_year,
+    grade_test,
+    valid_scores_school,
+    proficiency_rate_school,
+    proficiency_rate_state
+  )
+
+# Check cleaned data
+
+dim(ela_clean)
+names(ela_clean)
+summary(ela_clean)
+
 # NJDOE Source, Math Performance ---------------------------------------------------------------------------------------
 
 njdoe_math <- read_csv(
@@ -128,6 +148,25 @@ dim(njdoe_math)
 names(njdoe_math)
 summary(njdoe_math)
 
+# Keep Only ALL STUDENTS
+
+math_clean <- njdoe_math |> 
+  filter(student_group == "All Students") |>
+  select(
+    school_code,
+    school_name,
+    school_year,
+    grade_test,
+    valid_scores_school,
+    proficiency_rate_school,
+    proficiency_rate_state
+  )
+
+# Check cleaned data
+dim(math_clean)
+names(math_clean)
+summary(math_clean)
+
 # NJDOE Source, Overall Student Growth ---------------------------------------------------------------------------------------
 
 njdoe_student_growth <- read_csv(
@@ -135,7 +174,46 @@ njdoe_student_growth <- read_csv(
 )
 
 # Three checks
-
 dim(njdoe_student_growth)
 names(njdoe_student_growth)
 summary(njdoe_student_growth)
+
+# Keep All Students
+growth_clean <- njdoe_student_growth |>
+  filter(student_group == "All Students") |>
+  select(
+    school_code,
+    school_name,
+    school_year,
+    ela_median_student_growth_percentile_school,
+    ela_median_student_growth_percentile_school_category,
+    math_median_student_growth_percentile_school,
+    math_median_student_growth_percentile_school_category
+  )
+
+# Check cleaned data
+dim(growth_clean)
+names(growth_clean)
+summary(growth_clean)
+
+# Save -------------------------------------------------------------------------
+
+write_csv(
+  acs_comparison,
+  "data/acs_geographic_comparison_2024.csv"
+)
+
+write_csv(
+  ela_clean,
+  "data/ela_clean.csv"
+)
+
+write_csv(
+  math_clean,
+  "data/math_clean.csv"
+)
+
+write_csv(
+  growth_clean,
+  "data/growth_clean.csv"
+)

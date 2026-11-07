@@ -1,0 +1,19 @@
+school_code,school_name,school_year,grade_test,ela_valid_scores,ela_proficient,ela_state,math_valid_scores,math_proficient,math_state
+030,Frances DeMasi Elementary School,2024-25,Grade 3,60,55,44.9,60,63.3,49.7
+030,Frances DeMasi Elementary School,2024-25,Grade 4,41,65.9,53.5,40,62.5,46.7
+030,Frances DeMasi Elementary School,2024-25,Grade 5,62,59.7,52.8,62,58.1,44.2
+055,Helen L Beeler,2024-25,Grade 3,98,39.8,44.9,98,56.1,49.7
+055,Helen L Beeler,2024-25,Grade 4,92,41.3,53.5,92,54.3,46.7
+055,Helen L Beeler,2024-25,Grade 5,98,42.9,52.8,98,50,44.2
+057,J Harold Van Zant,2024-25,Grade 3,107,41.1,44.9,107,53.3,49.7
+057,J Harold Van Zant,2024-25,Grade 4,109,56.9,53.5,109,48.6,46.7
+057,J Harold Van Zant,2024-25,Grade 5,114,55.3,52.8,114,43,44.2
+058,Marlton Elementary,2024-25,Grade 3,87,42.5,44.9,89,50.6,49.7
+058,Marlton Elementary,2024-25,Grade 4,104,58.7,53.5,107,60.7,46.7
+058,Marlton Elementary,2024-25,Grade 5,106,35.8,52.8,107,37.4,44.2
+065,Richard L Rice School,2024-25,Grade 3,41,46.3,44.9,41,53.7,49.7
+065,Richard L Rice School,2024-25,Grade 4,35,48.6,53.5,35,54.3,46.7
+065,Richard L Rice School,2024-25,Grade 5,53,45.3,52.8,53,34,44.2
+070,Robert B Jaggard School,2024-25,Grade 3,70,57.1,44.9,70,48.6,49.7
+070,Robert B Jaggard School,2024-25,Grade 4,62,64.5,53.5,62,58.1,46.7
+070,Robert B Jaggard School,2024-25,Grade 5,61,55.7,52.8,61,50.8,44.2
