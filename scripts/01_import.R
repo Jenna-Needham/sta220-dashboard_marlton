@@ -196,24 +196,59 @@ dim(growth_clean)
 names(growth_clean)
 summary(growth_clean)
 
-# Save -------------------------------------------------------------------------
+# Save  -------------------------------------------------------------------------
+
+# Save to data/ ------------------------------------------------------------
 
 write_csv(
   acs_comparison,
   "data/acs_geographic_comparison_2024.csv"
 )
 
+# Save to app/data/ for Shiny app ------------------------------------------------------------
+
+write_csv(
+  acs_comparison,
+  "app/data/acs_geographic_comparison_2024.csv"
+)
+
+# Save to data/ ------------------------------------------------------------
+
 write_csv(
   ela_clean,
   "data/ela_clean.csv"
 )
+
+# Save to app/data/ for Shiny app ------------------------------------------------------------
+
+write_csv(
+  ela_clean,
+  "app/data/ela_clean.csv"
+)
+
+
+# Save to data/ ------------------------------------------------------------
 
 write_csv(
   math_clean,
   "data/math_clean.csv"
 )
 
+# Save to app/data/ for Shiny app ------------------------------------------------------------
+write_csv(
+  math_clean,
+  "app/data/math_clean.csv"
+)
+
+# Save to data/ ------------------------------------------------------------
+
 write_csv(
   growth_clean,
   "data/growth_clean.csv"
+)
+
+# Save to app/data/ for Shiny app ------------------------------------------------------------
+write_csv(
+  growth_clean,
+  "app/data/growth_clean.csv"
 )

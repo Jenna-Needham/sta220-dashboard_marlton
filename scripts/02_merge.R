@@ -115,3 +115,11 @@ write_csv(
   schools_merged,
   "data/schools_merged.csv"
 )
+
+# Save to app/data/ for the Shiny app ------------------------------------------------
+
+write_csv(
+  schools_merged,
+  "app/data/schools_merged.csv"
+)
+

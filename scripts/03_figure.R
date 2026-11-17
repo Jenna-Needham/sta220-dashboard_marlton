@@ -7,6 +7,7 @@
 library(tidyverse)
 
 schools_merged <- read_csv("data/schools_merged.csv")
+schools_merged <- read_csv("app/data/schools_merged.csv")
 
 # Check data
 dim(schools_merged)
@@ -34,12 +35,35 @@ names(schools_long)
 summary(schools_long)
 
 
+# All Grades --------------------------------------------------------------
+schools_long_math <- schools_long |>
+  filter(subject == "Math")
+
+fig1 <- ggplot(
+  schools_long_math,
+  aes(x = school_name, y = proficiency, fill = grade_test)
+) +
+  geom_col() +
+  labs(
+    title = "Grade 3 ELA and Math Proficiency Across Evesham Schools",
+    x = "Elementary School",
+    y = "Proficiency (%)"
+  )
+
+fig1
+
+
 ################################################################################
 ############                       GRADE 3                            #########
 ################################################################################
 
 grade3 <- schools_long |>
   filter(grade_test == "Grade 3")
+
+write_csv(
+  grade3,
+  "app/data/grade3.csv"
+)
 
 fig1 <- ggplot(
   grade3,

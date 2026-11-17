@@ -1,0 +1,13 @@
+school_code,school_name,school_year,grade_test,ela_valid_scores,ela_state,math_valid_scores,math_state,subject,proficiency
+030,Frances DeMasi,2024-25,Grade 3,60,44.9,60,49.7,ELA,55
+030,Frances DeMasi,2024-25,Grade 3,60,44.9,60,49.7,Math,63.3
+055,Helen L Beeler,2024-25,Grade 3,98,44.9,98,49.7,ELA,39.8
+055,Helen L Beeler,2024-25,Grade 3,98,44.9,98,49.7,Math,56.1
+057,J Harold Van Zant,2024-25,Grade 3,107,44.9,107,49.7,ELA,41.1
+057,J Harold Van Zant,2024-25,Grade 3,107,44.9,107,49.7,Math,53.3
+058,Marlton Elementary,2024-25,Grade 3,87,44.9,89,49.7,ELA,42.5
+058,Marlton Elementary,2024-25,Grade 3,87,44.9,89,49.7,Math,50.6
+065,Richard L Rice School,2024-25,Grade 3,41,44.9,41,49.7,ELA,46.3
+065,Richard L Rice School,2024-25,Grade 3,41,44.9,41,49.7,Math,53.7
+070,Robert B Jaggard School,2024-25,Grade 3,70,44.9,70,49.7,ELA,57.1
+070,Robert B Jaggard School,2024-25,Grade 3,70,44.9,70,49.7,Math,48.6
