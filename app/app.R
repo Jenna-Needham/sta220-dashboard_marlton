@@ -22,7 +22,7 @@ ui <- fluidPage(
   p("For: who is making the decision"),
   p("The decision: the one decision this dashboard helps with"),
   
-  selectInput(inputId = "pick", label = "Pick one:", choices = c("choice 1", "choice 2")),
+  selectInput(inputId = "pick", label = "Pick one:", choices = c("Grade 3", "Grade 4", "Grade 5")),
   
   h3("Figure 1. title"),
   plotOutput(outputId = "fig_1"),
@@ -40,16 +40,18 @@ ui <- fluidPage(
 
 # The Server (how the figures are made) ----------------------------------------------------------
 
-fig_data <- schools_long_math |>
-  filter(year == input$pick)
+
 
 server <- function(input, output) {
   
   output$fig_1 <- renderPlot({
     
-    fig1 <- ggplot(
-      schools_long_math,
-      aes(x = school_name, y = proficiency, fill = grade_test)) +
+    fig_data <- schools_long_math |>
+      filter(grade_test == input$pick)
+    
+     ggplot(
+      fig_data,
+      aes(x = proficiency, y = school_name)) +
       geom_col() +
       labs(
         title = "Grade 3 ELA and Math Proficiency Across Evesham Schools",
