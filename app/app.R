@@ -11,8 +11,8 @@ library(tidyverse)
 # Save your cleaned data in app/data/, then delete the # below.
 # Yes, you will have cleaned data in two places in your repo.
 
-my_data <- read_csv("data/schools_merged.csv")
-
+schools_merged <- read_csv("data/schools_merged.csv")
+growth_clean <- read_csv("data/growth_clean.csv")
 
 # The UI (what the reader sees) ------------------------------------------------------------------
 
@@ -44,25 +44,42 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
+  # Figure 1: Math proficiency
+  
   output$fig_1 <- renderPlot({
     
     fig_data <- schools_long_math |>
       filter(grade_test == input$pick)
     
-     ggplot(
+    ggplot(
       fig_data,
-      aes(x = proficiency, y = school_name)) +
+      aes(x = proficiency, y = school_name)
+    ) +
       geom_col() +
       labs(
-        title = "Grade 3 ELA and Math Proficiency Across Evesham Schools",
-        x = "Elementary School",
-        y = "Proficiency (%)"
+        title = paste(input$pick, "Math Proficiency Across Evesham Schools"),
+        x = "Proficiency (%)",
+        y = "Elementary School"
       )
-     })
+    
+  })
+  
+  
+  # Figure 2: Student growth
   
   output$fig_2 <- renderPlot({
     
-    ggplot()     # replace with your code for Figure 2
+    ggplot(
+      growth_long,
+      aes(x = growth, y = school_name, fill = subject)
+    ) +
+      geom_col(position = "dodge") +
+      labs(
+        title = "Median Student Growth Across Evesham Schools",
+        x = "Median Student Growth Percentile",
+        y = "Elementary School",
+        fill = "Subject"
+      )
     
   })
   
