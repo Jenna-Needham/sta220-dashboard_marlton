@@ -76,7 +76,7 @@ server <- function(input, output) {
       geom_col(position = "dodge") +
       labs(
         title = "Median Student Growth Across Evesham Schools",
-        x = "Median Student Growth Percentile",
+        x = "Median Student Growth Percentile (%)",
         y = "Elementary School",
         fill = "Subject"
       )
